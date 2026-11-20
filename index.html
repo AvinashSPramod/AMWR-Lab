@@ -1,134 +1,125 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>INSPIRELab | IIT Madras</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Home | Advanced Mechanisms and Wearable Robotics Lab</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <header>
-        <div class="header-container">
-            <a href="index.html" class="logo-area">
-                <div class="logo-icons">
-                    <!-- Replace with your actual image paths -->
-                    <div class="placeholder-logo">IL</div> 
-                    <div class="placeholder-logo">IITM</div>
-                </div>
-                <div class="logo-text">
-                    <strong>INSPIRELab</strong>
-                    <span>IIT Madras | Engineering Design</span>
-                </div>
-            </a>
-            
-            <div class="nav-controls">
-                <button class="theme-toggle" id="theme-toggle">☀️ Light</button>
-                <button class="menu-toggle" id="menu-toggle">☰ Menu</button>
-            </div>
 
-            <nav id="nav-menu">
-                <a href="index.html" class="active">Home</a>
-                <a href="#">Research</a>
-                <a href="#">Publications</a>
-                <a href="#">Team</a>
-                <a href="#">Lab Life</a>
-                <a href="#">News</a>
-                <a href="#">Openings</a>
-                <a href="#">Contact</a>
-            </nav>
+  <header class="site-header">
+    <div class="nav-container">
+      <a href="index.html" class="brand">
+        <span class="brand-title">Advanced Mechanisms &amp; Wearable Robotics Lab</span>
+        <span class="brand-subtitle">Department of Industrial Design &bull; NIT Rourkela</span>
+      </a>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="research.html">Research</a></li>
+          <li><a href="people.html">People</a></li>
+          <li><a href="publications.html">Publications</a></li>
+          <li><a href="facilities.html">Facilities</a></li>
+          <li><a href="openings.html">Openings</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="hero-inner hero-split">
+      <div>
+        <span class="hero-tag">NIT Rourkela &bull; Robotics &amp; Mechanism Design</span>
+        <h1>Advanced Mechanisms &amp; Wearable Robotics Lab</h1>
+        <p>
+          We engineer kinematically compatible exoskeletons, passive torque-tunable mechanisms, and reconfigurable cable-driven exosuits—validated from precision phantom testbeds to human-subject biomechanics.
+        </p>
+        <div class="hero-actions">
+          <a href="research.html" class="btn btn-primary">Explore Research</a>
+          <a href="openings.html" class="btn btn-outline">Open Positions</a>
         </div>
-    </header>
+      </div>
 
-    <main>
-        <!-- Hero Section -->
-        <section class="hero-section">
-            <div class="hero-content">
-                <span class="badge">Interdisciplinary Research Lab</span>
-                <h1>INSPIRELab at IIT Madras</h1>
-                <p>
-                    The INSPIRE Lab at IIT Madras focuses on development of safe and
-                    affordable robotic systems for surgical and image-guided interventions
-                    and their clinical translation.
-                </p>
-                <p>
-                    The lab is led by Dr. Nirav Patel, Associate Professor in the
-                    Department of Engineering Design, and is an interdisciplinary space for
-                    mechanical, biomedical, computer science, and electrical engineering research.
-                </p>
-                <div class="hero-actions">
-                    <a href="#" class="btn btn-primary">Explore Research</a>
-                    <a href="#" class="btn btn-secondary">Join the Lab</a>
-                </div>
-            </div>
-
-            <div class="hero-sidebar">
-                <div class="stats-container">
-                    <div class="stat-box"><strong>—</strong> Projects</div>
-                    <div class="stat-box"><strong>—</strong> Publications</div>
-                    <div class="stat-box"><strong>—</strong> Members</div>
-                </div>
-                <div class="news-widget">
-                    <div class="widget-header">
-                        <span>Latest News</span>
-                        <a href="#">View all →</a>
-                    </div>
-                    <p class="widget-content">Loading latest updates...</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Research Section -->
-        <section class="research-section">
-            <div class="section-header">
-                <h2>Research Directions</h2>
-            </div>
-            <div class="grid">
-                <article class="card">
-                    <span class="badge">Project</span>
-                    <h3>ASPIRE</h3>
-                    <p>Accessible Surgical-robotics Platform for Research in Surgical Training, Skill Evaluation and Autonomy.</p>
-                </article>
-                <article class="card">
-                    <span class="badge">Project</span>
-                    <h3>CT Guided Neurosurgery Robot</h3>
-                    <p>Development of image-guided robotic systems for neurosurgery workflows and needle-based interventions.</p>
-                </article>
-                <article class="card">
-                    <span class="badge">Project</span>
-                    <h3>Ultrasound Guided Liver Biopsy Robot</h3>
-                    <p>Real-time ultrasound-guided intervention system for minimally invasive biopsy and related procedures.</p>
-                </article>
-            </div>
-        </section>
-
-        <!-- Lab Info Section -->
-        <section class="info-section">
-            <div class="grid two-col">
-                <article class="card">
-                    <h2>Lab Snapshot</h2>
-                    <ul class="snapshot-list">
-                        <li><strong>Location:</strong> Department of Engineering Design, IIT Madras (ED-317A).</li>
-                        <li><strong>PI Background:</strong> Dr. Nirav Patel previously held a postdoctoral position at Johns Hopkins University (LCSR).</li>
-                        <li><strong>Research Scope:</strong> Medical robotics, image-guided interventions, robot-assisted retinal surgeries, path planning.</li>
-                    </ul>
-                </article>
-                <article class="card highlight-card">
-                    <h2>Work With Us</h2>
-                    <p>We welcome motivated students and collaborators interested in machine learning, engineering design, and intelligent systems.</p>
-                    <a href="#" class="btn btn-primary mt-3">Get in Touch</a>
-                </article>
-            </div>
-        </section>
-    </main>
-
-    <footer>
-        <div class="footer-container">
-            <span><strong>INSPIRELab</strong>, Department of Engineering Design, IIT Madras</span>
-            <span>Led by Dr. Nirav Patel</span>
+      <div class="hero-visual">
+        <div class="hero-visual-box">
+          [EDIT: Upload a hero photo/CAD render to assets/hero.png &amp; replace this box with &lt;img src="assets/hero.png" style="width:100%; border-radius:8px;"&gt;]
         </div>
-    </footer>
+      </div>
+    </div>
+  </section>
 
-    <script src="script.js"></script>
+  <main class="container">
+
+    <section>
+      <h2 class="section-title">About the Laboratory</h2>
+      <div class="card">
+        <p>
+          Led by <strong>Dr. Avinash Seena Pramod</strong> in the Department of Industrial Design at the National Institute of Technology (NIT) Rourkela, the <strong>Advanced Mechanisms and Wearable Robotics (AMWR) Lab</strong> focuses on first-principles mechanical synthesis and hardware validation for physical human-robot interaction. Our research spans multi-degree-of-freedom upper-limb mechanisms, passive industrial lower-back exoskeletons, and 3D geodesic cable-driven soft exosuits.
+        </p>
+      </div>
+    </section>
+
+    <section>
+      <h2 class="section-title">Core Research Pillars</h2>
+      <div class="grid-3">
+        <div class="card">
+          <h3>Mechanism Synthesis &amp; Kinematics</h3>
+          <p>
+            Closed-loop linkage optimization, self-aligning anatomical joints, and passive spring-cam-pulley transmissions engineered for lightweight, unpowered assistance.
+          </p>
+        </div>
+        <div class="card">
+          <h3>Industrial &amp; Assistive Exoskeletons</h3>
+          <p>
+            Upper-limb and lower-back wearable systems designed to offload musculoskeletal strain during overhead tasks and repetitive industrial lifting.
+          </p>
+        </div>
+        <div class="card">
+          <h3>Soft Cable-Driven Exosuits</h3>
+          <p>
+            3D geodesic cable-routing models and active anchor-point reconfiguration validated on instrumented phantom benches and human subjects.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2 class="section-title">News &amp; Highlights</h2>
+      <ul class="news-list">
+        <li class="news-item">
+          <span class="news-date">Nov 2026</span>
+          <span><strong>Lab Established:</strong> Advanced Mechanisms and Wearable Robotics Lab launches in the Department of Industrial Design, NIT Rourkela.</span>
+        </li>
+        <li class="news-item">
+          <span class="news-date">2026</span>
+          <span><strong>ICRA 2026:</strong> Invited oral presentation on wearable shoulder mechanism synthesis and phantom validation.</span>
+        </li>
+        <li class="news-item">
+          <span class="news-date">2026</span>
+          <span><strong>IEEE TMRB:</strong> Research article published in <em>IEEE Transactions on Medical Robotics and Bionics</em>.</span>
+        </li>
+        <li class="news-item">
+          <span class="news-date">[EDIT: Date]</span>
+          <span><strong>[EDIT: Headline]:</strong> [EDIT: Add upcoming Ph.D. intake, grant award, or publication announcement.]</span>
+        </li>
+      </ul>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div>
+        <strong>Advanced Mechanisms and Wearable Robotics Lab</strong><br />
+        Department of Industrial Design, NIT Rourkela, Odisha 769008, India
+      </div>
+      <div>
+        <strong>Contact:</strong> [EDIT: your-email@nitrkl.ac.in]<br />
+        &copy; 2026 AMWR Lab. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
 </body>
 </html>
