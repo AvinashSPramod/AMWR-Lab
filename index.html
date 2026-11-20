@@ -3,19 +3,448 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Home | Advanced Mechanisms and Wearable Robotics Lab</title>
-  <link rel="stylesheet" href="style.css" />
+  <title>AMWR Lab | Advanced Mechanisms &amp; Wearable Robotics Lab — NIT Rourkela</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    /* ==========================================================================
+       AMWR Lab — Self-Contained University Robotics Lab Stylesheet
+       Guaranteed single-line navbar, SVG emblem, and clean INSPIRE-style layout
+       ========================================================================== */
+    :root {
+      --navy: #0b1f3a;
+      --blue: #1d4ed8;
+      --blue-dark: #1e3a8a;
+      --teal: #0d9488;
+      --blue-soft: #eff6ff;
+      --bg-page: #f8fafc;
+      --bg-card: #ffffff;
+      --text-dark: #0f172a;
+      --text-body: #334155;
+      --text-muted: #64748b;
+      --border: #e2e8f0;
+      --shadow-sm: 0 1px 3px rgba(15, 23, 42, 0.06);
+      --shadow-md: 0 12px 28px -6px rgba(15, 23, 42, 0.08);
+      --radius: 12px;
+      --max-w: 1180px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background-color: var(--bg-page);
+      color: var(--text-body);
+      line-height: 1.65;
+      font-size: 16px;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    h1, h2, h3, .logo-name {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      color: var(--text-dark);
+      letter-spacing: -0.02em;
+    }
+
+    a {
+      text-decoration: none;
+      color: var(--blue);
+    }
+
+    /* --- Top Header & Single-Line Navigation --- */
+    .site-header {
+      background-color: #ffffff;
+      border-top: 4px solid var(--blue);
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 10px rgba(11, 31, 58, 0.05);
+    }
+
+    .nav-bar {
+      max-width: var(--max-w);
+      margin: 0 auto;
+      padding: 0.85rem 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1.5rem;
+    }
+
+    .brand-link {
+      display: flex;
+      align-items: center;
+      gap: 0.85rem;
+      flex-shrink: 0;
+    }
+
+    .logo-icon {
+      width: 44px;
+      height: 44px;
+      flex-shrink: 0;
+    }
+
+    .brand-text {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .logo-name {
+      font-size: 1.25rem;
+      font-weight: 800;
+      color: var(--navy);
+      line-height: 1.15;
+    }
+
+    .logo-name span {
+      color: var(--blue);
+    }
+
+    .logo-sub {
+      font-size: 0.76rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      margin-top: 2px;
+    }
+
+    /* Force single horizontal line for all menu items */
+    .nav-menu {
+      list-style: none;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      align-items: center;
+      gap: 0.25rem;
+      overflow-x: auto;
+    }
+
+    .nav-menu li {
+      list-style: none;
+      white-space: nowrap;
+    }
+
+    .nav-menu a {
+      display: inline-block;
+      padding: 0.5rem 0.85rem;
+      border-radius: 8px;
+      font-size: 0.92rem;
+      font-weight: 600;
+      color: var(--text-body);
+      white-space: nowrap;
+      transition: all 0.15s ease;
+    }
+
+    .nav-menu a:hover {
+      background-color: var(--blue-soft);
+      color: var(--blue);
+    }
+
+    .nav-menu a.active {
+      background-color: var(--blue);
+      color: #ffffff;
+    }
+
+    /* --- Hero Section --- */
+    .hero {
+      background: radial-gradient(circle at top right, #eff6ff 0%, #ffffff 55%, #f8fafc 100%);
+      border-bottom: 1px solid var(--border);
+      padding: 4.25rem 1.5rem;
+    }
+
+    .hero-grid {
+      max-width: var(--max-w);
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1.25fr 1fr;
+      gap: 2.75rem;
+      align-items: center;
+    }
+
+    .inst-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      background-color: var(--blue-soft);
+      color: var(--blue);
+      border: 1px solid #bfdbfe;
+      font-size: 0.78rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      padding: 0.35rem 0.9rem;
+      border-radius: 999px;
+      margin-bottom: 1.15rem;
+    }
+
+    .hero h1 {
+      font-size: 2.45rem;
+      font-weight: 800;
+      line-height: 1.18;
+      color: var(--navy);
+      margin-bottom: 1.1rem;
+    }
+
+    .hero p {
+      font-size: 1.06rem;
+      color: var(--text-body);
+      margin-bottom: 1.85rem;
+      max-width: 600px;
+    }
+
+    .btn-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.85rem;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 0.72rem 1.5rem;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 0.95rem;
+      transition: all 0.15s ease;
+    }
+
+    .btn-primary {
+      background-color: var(--blue);
+      color: #ffffff;
+      box-shadow: 0 4px 12px rgba(29, 78, 216, 0.25);
+    }
+
+    .btn-primary:hover {
+      background-color: var(--blue-dark);
+      transform: translateY(-1px);
+    }
+
+    .btn-secondary {
+      background-color: #ffffff;
+      color: var(--navy);
+      border: 1px solid #cbd5e1;
+    }
+
+    .btn-secondary:hover {
+      border-color: var(--blue);
+      color: var(--blue);
+      background-color: var(--blue-soft);
+    }
+
+    .hero-card {
+      background-color: #ffffff;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.25rem;
+      box-shadow: var(--shadow-md);
+    }
+
+    .hero-placeholder {
+      background: linear-gradient(135deg, #eff6ff 0%, #f0fdfa 100%);
+      border: 2px dashed #93c5fd;
+      border-radius: 8px;
+      min-height: 250px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 1.5rem;
+      color: var(--navy);
+      font-weight: 600;
+      font-size: 0.92rem;
+    }
+
+    /* --- Main Container & Sections --- */
+    .container {
+      max-width: var(--max-w);
+      margin: 0 auto;
+      padding: 3.5rem 1.5rem;
+    }
+
+    section {
+      margin-bottom: 3.75rem;
+    }
+
+    section:last-child {
+      margin-bottom: 0;
+    }
+
+    .section-heading {
+      font-size: 1.55rem;
+      font-weight: 800;
+      color: var(--navy);
+      margin-bottom: 1.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.7rem;
+    }
+
+    .section-heading::before {
+      content: "";
+      display: inline-block;
+      width: 5px;
+      height: 1.4rem;
+      background: linear-gradient(180deg, var(--blue), var(--teal));
+      border-radius: 4px;
+    }
+
+    .about-box {
+      background-color: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.85rem 2rem;
+      box-shadow: var(--shadow-sm);
+      font-size: 1.02rem;
+    }
+
+    /* --- Research Pillars Grid --- */
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+    }
+
+    .pillar-card {
+      background-color: var(--bg-card);
+      border: 1px solid var(--border);
+      border-top: 4px solid var(--blue);
+      border-radius: var(--radius);
+      padding: 1.75rem;
+      box-shadow: var(--shadow-sm);
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
+    }
+
+    .pillar-card:nth-child(2) {
+      border-top-color: var(--teal);
+    }
+
+    .pillar-card:hover {
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-md);
+    }
+
+    .pillar-num {
+      display: inline-block;
+      font-size: 0.75rem;
+      font-weight: 800;
+      color: var(--blue);
+      background-color: var(--blue-soft);
+      padding: 0.2rem 0.6rem;
+      border-radius: 5px;
+      margin-bottom: 0.75rem;
+    }
+
+    .pillar-card h3 {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 0.6rem;
+    }
+
+    .pillar-card p {
+      font-size: 0.95rem;
+      color: var(--text-body);
+    }
+
+    /* --- News Timeline --- */
+    .news-card {
+      background-color: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow-sm);
+      overflow: hidden;
+    }
+
+    .news-row {
+      display: flex;
+      align-items: baseline;
+      gap: 1.25rem;
+      padding: 1.15rem 1.6rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .news-row:last-child {
+      border-bottom: none;
+    }
+
+    .news-tag {
+      background-color: var(--blue-soft);
+      color: var(--blue);
+      font-weight: 700;
+      font-size: 0.78rem;
+      padding: 0.25rem 0.7rem;
+      border-radius: 6px;
+      min-width: 96px;
+      text-align: center;
+      flex-shrink: 0;
+    }
+
+    /* --- Footer --- */
+    .site-footer {
+      background-color: var(--navy);
+      color: #cbd5e1;
+      padding: 2.75rem 1.5rem;
+      margin-top: 4rem;
+      font-size: 0.92rem;
+    }
+
+    .footer-grid {
+      max-width: var(--max-w);
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 1.5rem;
+    }
+
+    .footer-grid strong {
+      color: #ffffff;
+    }
+
+    @media (max-width: 960px) {
+      .nav-bar {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .hero-grid,
+      .grid-3 {
+        grid-template-columns: 1fr;
+      }
+      .hero h1 {
+        font-size: 1.95rem;
+      }
+    }
+  </style>
 </head>
 <body>
 
+  <!-- Header with Custom SVG Linkage Logo & Single-Line Navigation -->
   <header class="site-header">
-    <div class="nav-container">
-      <a href="index.html" class="brand">
-        <span class="brand-title">Advanced Mechanisms &amp; Wearable Robotics Lab</span>
-        <span class="brand-subtitle">Department of Industrial Design &bull; NIT Rourkela</span>
+    <div class="nav-bar">
+      <a href="index.html" class="brand-link">
+        <!-- Custom SVG Kinematics & Wearable Robotics Emblem -->
+        <svg class="logo-icon" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <rect width="48" height="48" rx="11" fill="#0B1F3A"/>
+          <path d="M13 33L21 15L31 23L36 14" stroke="#38BDF8" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M13 33H35" stroke="#1D4ED8" stroke-width="2.5" stroke-linecap="round"/>
+          <circle cx="13" cy="33" r="3.5" fill="#FFFFFF" stroke="#1D4ED8" stroke-width="2"/>
+          <circle cx="21" cy="15" r="3.5" fill="#FFFFFF" stroke="#0D9488" stroke-width="2"/>
+          <circle cx="31" cy="23" r="3.5" fill="#FFFFFF" stroke="#0D9488" stroke-width="2"/>
+          <circle cx="36" cy="14" r="3.5" fill="#38BDF8"/>
+        </svg>
+        <div class="brand-text">
+          <span class="logo-name">AMWR <span>Lab</span></span>
+          <span class="logo-sub">Advanced Mechanisms &amp; Wearable Robotics &bull; NIT Rourkela</span>
+        </div>
       </a>
-      <nav>
-        <ul class="nav-links">
+
+      <nav aria-label="Primary Navigation">
+        <ul class="nav-menu">
           <li><a href="index.html" class="active">Home</a></li>
           <li><a href="research.html">Research</a></li>
           <li><a href="people.html">People</a></li>
@@ -27,55 +456,58 @@
     </div>
   </header>
 
+  <!-- Hero Section -->
   <section class="hero">
-    <div class="hero-inner hero-split">
+    <div class="hero-grid">
       <div>
-        <span class="hero-tag">NIT Rourkela &bull; Robotics &amp; Mechanism Design</span>
+        <span class="inst-pill">Department of Industrial Design &bull; NIT Rourkela</span>
         <h1>Advanced Mechanisms &amp; Wearable Robotics Lab</h1>
         <p>
-          We engineer kinematically compatible exoskeletons, passive torque-tunable mechanisms, and reconfigurable cable-driven exosuits—validated from precision phantom testbeds to human-subject biomechanics.
+          Pioneering kinematically compatible exoskeletons, passive torque-tunable mechanisms, and reconfigurable cable-driven exosuits—validated from precision phantom testbeds to human-subject biomechanics.
         </p>
-        <div class="hero-actions">
+        <div class="btn-group">
           <a href="research.html" class="btn btn-primary">Explore Research</a>
-          <a href="openings.html" class="btn btn-outline">Open Positions</a>
+          <a href="openings.html" class="btn btn-secondary">Join Our Group</a>
         </div>
       </div>
 
-      <div class="hero-visual">
-        <div class="hero-visual-box">
-          [EDIT: Upload a hero photo/CAD render to assets/hero.png &amp; replace this box with &lt;img src="assets/hero.png" style="width:100%; border-radius:8px;"&gt;]
+      <div class="hero-card">
+        <div class="hero-placeholder">
+          [EDIT: Upload a photo/CAD render of your exoskeleton or phantom testbed to <code>assets/hero.png</code> and replace this box with <code>&lt;img src="assets/hero.png" style="width:100%; border-radius:8px;"&gt;</code>]
         </div>
       </div>
     </div>
   </section>
 
+  <!-- Main Content -->
   <main class="container">
 
     <section>
-      <h2 class="section-title">About the Laboratory</h2>
-      <div class="card">
-        <p>
-          Led by <strong>Dr. Avinash Seena Pramod</strong> in the Department of Industrial Design at the National Institute of Technology (NIT) Rourkela, the <strong>Advanced Mechanisms and Wearable Robotics (AMWR) Lab</strong> focuses on first-principles mechanical synthesis and hardware validation for physical human-robot interaction. Our research spans multi-degree-of-freedom upper-limb mechanisms, passive industrial lower-back exoskeletons, and 3D geodesic cable-driven soft exosuits.
-        </p>
+      <h2 class="section-heading">About the Laboratory</h2>
+      <div class="about-box">
+        Led by <strong>Dr. Avinash Seena Pramod</strong> in the Department of Industrial Design at the National Institute of Technology (NIT) Rourkela, the <strong>Advanced Mechanisms and Wearable Robotics (AMWR) Lab</strong> focuses on first-principles mechanical synthesis and hardware validation for physical human-robot interaction. Our work bridges analytical linkage design and physical prototyping across multi-degree-of-freedom shoulder mechanisms, passive industrial back-support exoskeletons, and 3D geodesic cable-driven soft exosuits.
       </div>
     </section>
 
     <section>
-      <h2 class="section-title">Core Research Pillars</h2>
+      <h2 class="section-heading">Core Research Pillars</h2>
       <div class="grid-3">
-        <div class="card">
+        <div class="pillar-card">
+          <span class="pillar-num">THEME 01</span>
           <h3>Mechanism Synthesis &amp; Kinematics</h3>
           <p>
             Closed-loop linkage optimization, self-aligning anatomical joints, and passive spring-cam-pulley transmissions engineered for lightweight, unpowered assistance.
           </p>
         </div>
-        <div class="card">
+        <div class="pillar-card">
+          <span class="pillar-num">THEME 02</span>
           <h3>Industrial &amp; Assistive Exoskeletons</h3>
           <p>
-            Upper-limb and lower-back wearable systems designed to offload musculoskeletal strain during overhead tasks and repetitive industrial lifting.
+            Upper-limb and lower-back wearable systems designed to offload musculoskeletal strain during overhead lifting and repetitive industrial stoop tasks.
           </p>
         </div>
-        <div class="card">
+        <div class="pillar-card">
+          <span class="pillar-num">THEME 03</span>
           <h3>Soft Cable-Driven Exosuits</h3>
           <p>
             3D geodesic cable-routing models and active anchor-point reconfiguration validated on instrumented phantom benches and human subjects.
@@ -85,38 +517,39 @@
     </section>
 
     <section>
-      <h2 class="section-title">News &amp; Highlights</h2>
-      <ul class="news-list">
-        <li class="news-item">
-          <span class="news-date">Nov 2026</span>
-          <span><strong>Lab Established:</strong> Advanced Mechanisms and Wearable Robotics Lab launches in the Department of Industrial Design, NIT Rourkela.</span>
-        </li>
-        <li class="news-item">
-          <span class="news-date">2026</span>
+      <h2 class="section-heading">News &amp; Announcements</h2>
+      <div class="news-card">
+        <div class="news-row">
+          <span class="news-tag">Nov 2026</span>
+          <span><strong>Lab Launch:</strong> The Advanced Mechanisms and Wearable Robotics Lab is established in the Department of Industrial Design, NIT Rourkela.</span>
+        </div>
+        <div class="news-row">
+          <span class="news-tag">2026</span>
           <span><strong>ICRA 2026:</strong> Invited oral presentation on wearable shoulder mechanism synthesis and phantom validation.</span>
-        </li>
-        <li class="news-item">
-          <span class="news-date">2026</span>
-          <span><strong>IEEE TMRB:</strong> Research article published in <em>IEEE Transactions on Medical Robotics and Bionics</em>.</span>
-        </li>
-        <li class="news-item">
-          <span class="news-date">[EDIT: Date]</span>
-          <span><strong>[EDIT: Headline]:</strong> [EDIT: Add upcoming Ph.D. intake, grant award, or publication announcement.]</span>
-        </li>
-      </ul>
+        </div>
+        <div class="news-row">
+          <span class="news-tag">2026</span>
+          <span><strong>IEEE TMRB:</strong> Research article on wearable shoulder mechanisms published in <em>IEEE Transactions on Medical Robotics and Bionics</em>.</span>
+        </div>
+        <div class="news-row">
+          <span class="news-tag">[EDIT: Date]</span>
+          <span><strong>[EDIT: Announcement Title]:</strong> [EDIT: Add Ph.D. recruitment, grant award, or publication news here.]</span>
+        </div>
+      </div>
     </section>
 
   </main>
 
+  <!-- Footer -->
   <footer class="site-footer">
-    <div class="footer-inner">
+    <div class="footer-grid">
       <div>
-        <strong>Advanced Mechanisms and Wearable Robotics Lab</strong><br />
-        Department of Industrial Design, NIT Rourkela, Odisha 769008, India
+        <strong>Advanced Mechanisms and Wearable Robotics (AMWR) Lab</strong><br />
+        Department of Industrial Design, National Institute of Technology Rourkela, Odisha 769008, India
       </div>
       <div>
         <strong>Contact:</strong> [EDIT: your-email@nitrkl.ac.in]<br />
-        &copy; 2026 AMWR Lab. All rights reserved.
+        &copy; 2026 AMWR Lab, NIT Rourkela. All rights reserved.
       </div>
     </div>
   </footer>
