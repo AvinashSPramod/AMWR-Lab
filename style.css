@@ -79,7 +79,8 @@ a {
 }
 
 .lab-banner-logo {
-  height: 64px;
+  height: 54px;
+  max-width: 240px;
   width: auto;
   object-fit: contain;
   display: block;
@@ -87,18 +88,21 @@ a {
 
 .logo-divider {
   width: 1px;
-  height: 46px;
+  height: 44px;
   background-color: #cbd5e1;
+  flex-shrink: 0;
 }
 
 .inst-group {
   display: flex;
   align-items: center;
   gap: 0.65rem;
+  flex-shrink: 0;
 }
 
 .nitr-crest-logo {
   height: 54px;
+  max-width: 64px;
   width: auto;
   object-fit: contain;
   display: block;
@@ -130,6 +134,7 @@ a {
   flex-wrap: nowrap;
   align-items: center;
   gap: 0.3rem;
+  overflow-x: auto;
 }
 
 .nav-menu li {
