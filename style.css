@@ -1,6 +1,6 @@
 /* ==========================================================================
    AMWR Lab — Master Stylesheet (style.css)
-   Single-line navigation, custom emblem styling, and clean academic layout
+   Single-line navigation, dual-logo header, and clean academic layout
    ========================================================================== */
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap');
@@ -49,7 +49,7 @@ a {
   color: var(--blue);
 }
 
-/* --- Top Header & Single-Line Navigation (Full-Width Bar) --- */
+/* --- Top Header & Single-Line Navigation --- */
 .site-header {
   background-color: #ffffff;
   border-top: 4px solid var(--blue);
@@ -62,9 +62,9 @@ a {
 
 .nav-bar {
   width: 100%;
-  max-width: 1440px;       /* Much wider than the 1180px body container */
+  max-width: 1480px;
   margin: 0 auto;
-  padding: 0.85rem 2.5rem; /* Generous edge breathing room */
+  padding: 0.7rem 2.25rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -74,63 +74,62 @@ a {
 .brand-link {
   display: flex;
   align-items: center;
-  gap: 0.9rem;
+  gap: 1rem;
   flex-shrink: 0;
 }
 
-.logo-group {
-  display: flex;
-  align-items: center;
-  gap: 0.65rem;
-  flex-shrink: 0;
-}
-
-.header-logo {
-  height: 48px;
+.lab-banner-logo {
+  height: 64px;
   width: auto;
-  max-width: 120px;
   object-fit: contain;
   display: block;
 }
 
 .logo-divider {
   width: 1px;
-  height: 36px;
+  height: 46px;
   background-color: #cbd5e1;
 }
 
-.brand-text {
+.inst-group {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+}
+
+.nitr-crest-logo {
+  height: 54px;
+  width: auto;
+  object-fit: contain;
+  display: block;
+}
+
+.inst-text {
   display: flex;
   flex-direction: column;
+  line-height: 1.25;
 }
 
-.logo-name {
-  font-size: 1.25rem;
-  font-weight: 800;
+.inst-dept {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 0.84rem;
+  font-weight: 700;
   color: var(--navy);
-  line-height: 1.15;
 }
 
-.logo-name span {
-  color: var(--blue);
-}
-
-.logo-sub {
+.inst-name {
   font-size: 0.78rem;
   font-weight: 600;
   color: var(--text-muted);
-  margin-top: 2px;
 }
 
-/* Keeps all navigation items on a single horizontal line */
 .nav-menu {
   list-style: none;
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
   align-items: center;
-  gap: 0.35rem;
-  overflow-x: auto;
+  gap: 0.3rem;
 }
 
 .nav-menu li {
@@ -140,44 +139,7 @@ a {
 
 .nav-menu a {
   display: inline-block;
-  padding: 0.52rem 0.95rem;
-  border-radius: 8px;
-  font-size: 0.93rem;
-  font-weight: 600;
-  color: var(--text-body);
-  white-space: nowrap;
-  transition: all 0.15s ease;
-}
-
-.nav-menu a:hover {
-  background-color: var(--blue-soft);
-  color: var(--blue);
-}
-
-.nav-menu a.active {
-  background-color: var(--blue);
-  color: #ffffff;
-}
-
-/* Keeps all navigation items on a single horizontal line */
-.nav-menu {
-  list-style: none;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  align-items: center;
-  gap: 0.25rem;
-  overflow-x: auto;
-}
-
-.nav-menu li {
-  list-style: none;
-  white-space: nowrap;
-}
-
-.nav-menu a {
-  display: inline-block;
-  padding: 0.5rem 0.85rem;
+  padding: 0.5rem 0.9rem;
   border-radius: 8px;
   font-size: 0.92rem;
   font-weight: 600;
@@ -616,11 +578,19 @@ section:last-child {
   color: #ffffff;
 }
 
-@media (max-width: 960px) {
+@media (max-width: 1120px) {
   .nav-bar {
     flex-direction: column;
     align-items: flex-start;
+    padding: 0.85rem 1.5rem;
   }
+  .nav-menu {
+    width: 100%;
+    overflow-x: auto;
+  }
+}
+
+@media (max-width: 960px) {
   .hero-grid,
   .grid-3,
   .grid-2,
