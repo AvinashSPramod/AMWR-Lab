@@ -26,9 +26,9 @@
 
       <nav aria-label="Primary Navigation">
         <ul class="nav-menu">
-          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="index.html">Home</a></li>
           <li><a href="research.html">Research</a></li>
-          <li><a href="people.html">People</a></li>
+          <li><a href="people.html" class="active">People</a></li>
           <li><a href="publications.html">Publications</a></li>
           <li><a href="facilities.html">Facilities</a></li>
           <li><a href="openings.html">Openings</a></li>
@@ -61,10 +61,10 @@
             Dr. Avinash S Pramod leads the Advanced Mechanism and Wearable Robotics Lab at NIT Rourkela. Prior to joining NIT Rourkela, he served as a faculty member at the Rajiv Gandhi Institute of Petroleum Technology (RGIPT) and completed his postdoctoral research at the Assistive and Rehabilitation Robotics Lab, Chung-Ang University (and HUrotics Inc.), Seoul, South Korea. He earned his Ph.D. from the Indian Institute of Technology (IIT) Madras, focusing on wearable shoulder mechanisms and multi-degree-of-freedom shoulder phantom testbeds.
           </p>
           <div class="badge-row">
-            <a href="https://scholar.google.com/citations?user=DeYeTZAAAAAJ&hl=en" class="badge">Google Scholar</a>
-            <a href="https://orcid.org/0000-0001-9369-458X" class="badge">ORCID</a>
-            <a href="https://www.linkedin.com/in/avinash-s-pramod-b934b919b/" class="badge">LinkedIn</a>
-            <a href="mailto:[EDIT: your-email@nitrkl.ac.in]" class="badge">Email</a>
+            <a href="https://scholar.google.com/citations?user=DeYeTZAAAAAJ&hl=en" target="_blank" rel="noopener noreferrer" class="badge">Google Scholar</a>
+            <a href="https://orcid.org/0000-0001-9369-458X" target="_blank" rel="noopener noreferrer" class="badge">ORCID</a>
+            <a href="https://www.linkedin.com/in/avinash-s-pramod-b934b919b/" target="_blank" rel="noopener noreferrer" class="badge">LinkedIn</a>
+            <a href="mailto:avinashspramod@nitrkl.ac.in" class="badge">Email</a>
           </div>
         </div>
       </div>
@@ -112,11 +112,21 @@
         Department of Industrial Design, National Institute of Technology Rourkela, Odisha 769008, India
       </div>
       <div>
-        <strong>Contact:</strong> [EDIT: your-email@nitrkl.ac.in]<br />
+        <strong>Contact:</strong> avinashspramod@nitrkl.ac.in<br />
         &copy; 2026 AMWR Lab, NIT Rourkela. All rights reserved.
       </div>
     </div>
   </footer>
+
+  <script>
+    (function () {
+      const currentFile = window.location.pathname.split("/").pop() || "index.html";
+      document.querySelectorAll(".nav-menu a").forEach((link) => {
+        const targetFile = link.getAttribute("href");
+        link.classList.toggle("active", targetFile === currentFile);
+      });
+    })();
+  </script>
 
 </body>
 </html>
