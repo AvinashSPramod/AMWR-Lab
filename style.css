@@ -257,6 +257,28 @@ a {
   box-shadow: var(--shadow-md);
 }
 
+.hero-slider {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.hero-slide {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 0.6s ease-in-out;
+}
+
+.hero-slide.active {
+  opacity: 1;
+}
+
 .hero-placeholder,
 .img-placeholder {
   background: linear-gradient(135deg, #eff6ff 0%, #f0fdfa 100%);
