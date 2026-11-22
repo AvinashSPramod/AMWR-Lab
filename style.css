@@ -66,30 +66,32 @@ a {
   margin: 0 auto;
   padding: 0.7rem 2.25rem;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 1.5rem;
-}
-
-.brand-group {
-  display: inline-flex;
   flex-direction: row;
   flex-wrap: nowrap;
   align-items: center;
-  gap: 1rem;
+  justify-content: space-between;
+  gap: 1.25rem;
+}
+
+.brand-group {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  gap: 0.85rem;
   flex-shrink: 0;
+  white-space: nowrap;
 }
 
 .brand-link {
-  display: flex;
+  display: inline-flex;
   align-items: center;
-  gap: 1rem;
   flex-shrink: 0;
 }
 
 .lab-banner-logo {
   height: 54px;
-  max-width: 240px;
+  max-width: 210px;
   width: auto;
   object-fit: contain;
   display: block;
@@ -97,41 +99,56 @@ a {
 
 .logo-divider {
   width: 1px;
-  height: 44px;
+  height: 40px;
   background-color: #cbd5e1;
   flex-shrink: 0;
 }
 
 .inst-group {
-  display: flex;
+  display: inline-flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
   align-items: center;
-  gap: 0.65rem;
+  gap: 0.6rem;
   flex-shrink: 0;
+  white-space: nowrap;
 }
 
 .nitr-crest-logo {
-  height: 54px;
-  max-width: 64px;
+  height: 48px;
   width: auto;
   object-fit: contain;
   display: block;
 }
 
+body.home-page .lab-banner-logo {
+  height: 64px;
+  max-width: 245px;
+}
+
+body.home-page .nitr-crest-logo {
+  height: 58px;
+}
+
+body.home-page .logo-divider {
+  height: 48px;
+}
+
 .inst-text {
   display: flex;
   flex-direction: column;
-  line-height: 1.25;
+  line-height: 1.2;
 }
 
 .inst-dept {
   font-family: 'Plus Jakarta Sans', sans-serif;
-  font-size: 0.84rem;
+  font-size: 0.82rem;
   font-weight: 700;
   color: var(--navy);
 }
 
 .inst-name {
-  font-size: 0.78rem;
+  font-size: 0.76rem;
   font-weight: 600;
   color: var(--text-muted);
 }
@@ -142,8 +159,8 @@ a {
   flex-direction: row;
   flex-wrap: nowrap;
   align-items: center;
-  gap: 0.3rem;
-  overflow-x: auto;
+  gap: 0.25rem;
+  flex-shrink: 1;
 }
 
 .nav-menu li {
@@ -153,9 +170,9 @@ a {
 
 .nav-menu a {
   display: inline-block;
-  padding: 0.5rem 0.9rem;
+  padding: 0.48rem 0.75rem;
   border-radius: 8px;
-  font-size: 0.92rem;
+  font-size: 0.9rem;
   font-weight: 600;
   color: var(--text-body);
   white-space: nowrap;
@@ -617,7 +634,7 @@ section:last-child {
   color: #ffffff;
 }
 
-@media (max-width: 1120px) {
+@media (max-width: 960px) {
   .nav-bar {
     flex-direction: column;
     align-items: flex-start;
@@ -627,9 +644,6 @@ section:last-child {
     width: 100%;
     overflow-x: auto;
   }
-}
-
-@media (max-width: 960px) {
   .hero-grid,
   .grid-3,
   .grid-2,
