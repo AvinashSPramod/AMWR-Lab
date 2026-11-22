@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Funding | AMWR Lab — NIT Rourkela</title>
+  <link rel="icon" type="image/png" href="assets/favicon.png" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="nav-bar">
+      <div class="brand-group">
+        <a href="index.html" class="brand-link">
+          <img src="assets/AMWR_Lab_Logo.png" alt="Advanced Mechanism and Wearable Robotics Lab" class="lab-banner-logo" />
+        </a>
+        <span class="logo-divider" aria-hidden="true"></span>
+        <a href="https://www.nitrkl.ac.in/ID/" target="_blank" rel="noopener noreferrer" class="inst-group" title="NIT Rourkela Department of Industrial Design">
+          <img src="assets/NIT_Rourkela_Colour_Logo_Official.png" alt="NIT Rourkela Logo" class="nitr-crest-logo" />
+          <div class="inst-text">
+            <span class="inst-dept">Department of Industrial Design</span>
+            <span class="inst-name">NIT Rourkela</span>
+          </div>
+        </a>
+      </div>
+
+      <nav aria-label="Primary Navigation">
+        <ul class="nav-menu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="research.html">Research</a></li>
+          <li><a href="people.html">People</a></li>
+          <li><a href="publications.html">Publications</a></li>
+          <li><a href="facilities.html">Facilities</a></li>
+          <li><a href="funding.html" class="active">Funding</a></li>
+          <li><a href="photos.html">Photos</a></li>
+          <li><a href="openings.html">Openings</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <div class="page-banner">
+    <div class="page-banner-inner">
+      <h1>Funding &amp; Grants</h1>
+      <p>Sponsored research projects, institutional grants, and industry collaborations supporting the AMWR Lab.</p>
+    </div>
+  </div>
+
+  <main class="container">
+
+    <section>
+      <h2 class="section-heading">Ongoing Projects</h2>
+      <div class="card">
+        <h3>Soon to be updated</h3>
+        <p>
+          Details of funded research projects and grants at the AMWR Lab, NIT Rourkela will be updated here soon.
+        </p>
+      </div>
+
+      <!-- Template: Copy and uncomment this card to add a funded project later
+      <div class="card" style="margin-top: 1rem;">
+        <span class="pub-badge">Ongoing &bull; 2026–2029</span>
+        <h3 style="margin-top: 0.5rem;">[Project Title]</h3>
+        <p><strong>Funding Agency:</strong> [e.g., ANRF / DST / NIT Rourkela Seed Grant]</p>
+        <p><strong>Role:</strong> Principal Investigator (PI)</p>
+        <p><strong>Duration:</strong> [Start Year – End Year]</p>
+        <p><strong>Brief Overview:</strong> [1–2 sentence summary of the project objectives.]</p>
+      </div>
+      -->
+    </section>
+
+    <section>
+      <h2 class="section-heading">Completed Projects</h2>
+      <div class="card">
+        <p>No completed projects listed yet.</p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-grid">
+      <div>
+        <strong>Advanced Mechanism and Wearable Robotics (AMWR) Lab</strong><br />
+        Department of Industrial Design, National Institute of Technology Rourkela, Odisha 769008, India
+      </div>
+      <div>
+        <strong>Contact:</strong> avinashspramod@nitrkl.ac.in<br />
+        &copy; 2026 AMWR Lab, NIT Rourkela. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      const currentFile = window.location.pathname.split("/").pop() || "index.html";
+      document.querySelectorAll(".nav-menu a").forEach((link) => {
+        const targetFile = link.getAttribute("href");
+        link.classList.toggle("active", targetFile === currentFile);
+      });
+    })();
+  </script>
+
+</body>
+</html>
