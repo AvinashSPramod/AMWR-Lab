@@ -234,7 +234,6 @@ body.home-page .logo-divider {
   color: var(--text-body);
   margin-bottom: 1.85rem;
   max-width: 600px;
-  text-align: justify;
 }
 
 .btn-group {
@@ -388,7 +387,6 @@ section:last-child {
   padding: 1.85rem 2rem;
   box-shadow: var(--shadow-sm);
   font-size: 1.02rem;
-  text-align: justify;
 }
 
 /* --- Research Pillars & Grids --- */
@@ -610,6 +608,36 @@ section:last-child {
   padding: 1.5rem 1.75rem;
   border-radius: var(--radius);
   margin-bottom: 2rem;
+}
+
+/* --- Uniform Justified Body Copy Across Pages --- */
+.hero p,
+.about-box,
+.card,
+.pillar-card p,
+.research-block p,
+.research-block li,
+.styled-list li,
+.pub-authors,
+.callout-box p,
+main p {
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+.page-banner p,
+.site-footer p,
+.nav-menu a,
+.btn,
+.inst-pill,
+.pillar-num,
+.pub-badge,
+.badge {
+  text-align: left;
+}
+
+.news-tag {
+  text-align: center;
 }
 
 /* --- Footer --- */
