@@ -239,6 +239,7 @@
       margin-bottom: 1.85rem;
       max-width: 600px;
       text-align: justify;
+      text-justify: inter-word;
     }
 
     .btn-group {
@@ -350,6 +351,8 @@
       padding: 1.85rem 2rem;
       box-shadow: var(--shadow-sm);
       font-size: 1.02rem;
+      text-align: justify;
+      text-justify: inter-word;
     }
 
     /* --- Research Pillars Grid --- */
@@ -399,6 +402,8 @@
     .pillar-card p {
       font-size: 0.95rem;
       color: var(--text-body);
+      text-align: justify;
+      text-justify: inter-word;
     }
 
     /* --- News Timeline --- */
@@ -416,6 +421,8 @@
       gap: 1.25rem;
       padding: 1.15rem 1.6rem;
       border-bottom: 1px solid var(--border);
+      text-align: justify;
+      text-justify: inter-word;
     }
 
     .news-row:last-child {
@@ -597,6 +604,7 @@
   </footer>
 
   <script>
+    // Hero slideshow
     const slides = document.querySelectorAll('.hero-slide');
     let currentSlide = 0;
 
@@ -607,6 +615,15 @@
         slides[currentSlide].classList.add('active');
       }, 2000);
     }
+
+    // Automatic active nav highlight
+    (function () {
+      const currentFile = window.location.pathname.split("/").pop() || "index.html";
+      document.querySelectorAll(".nav-menu a").forEach((link) => {
+        const targetFile = link.getAttribute("href");
+        link.classList.toggle("active", targetFile === currentFile);
+      });
+    })();
   </script>
 
 </body>
