@@ -259,20 +259,26 @@
       box-shadow: var(--shadow-md);
     }
 
-    .hero-placeholder {
-      background: linear-gradient(135deg, #eff6ff 0%, #f0fdfa 100%);
-      border: 2px dashed #93c5fd;
+    .hero-slider {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      overflow: hidden;
       border-radius: 8px;
-      min-height: 250px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      padding: 1.5rem;
-      color: var(--navy);
-      font-weight: 600;
-      font-size: 0.92rem;
+    }
+
+    .hero-slide {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0;
+      transition: opacity 0.6s ease-in-out;
+    }
+
+    .hero-slide.active {
+      opacity: 1;
     }
 
     /* --- Main Container & Sections --- */
@@ -490,10 +496,10 @@
       </div>
 
       <div class="hero-card">
-        <div class="hero-placeholder">
-          <div class="hero-card">
-          <img src="assets/hero.png" alt="AMWR Lab" style="width: 100%; height: auto; display: block; border-radius: 8px;" />
-          </div>
+        <div class="hero-slider">
+          <img src="assets/hero.png" alt="AMWR Lab Slide 1" class="hero-slide active" />
+          <img src="assets/shoulder.png" alt="AMWR Lab Slide 2" class="hero-slide" />
+          <img src="assets/back-exo.png" alt="AMWR Lab Slide 3" class="hero-slide" />
         </div>
       </div>
     </div>
@@ -561,6 +567,19 @@
       </div>
     </div>
   </footer>
+
+  <script>
+    const slides = document.querySelectorAll('.hero-slide');
+    let currentSlide = 0;
+
+    if (slides.length > 1) {
+      setInterval(() => {
+        slides[currentSlide].classList.remove('active');
+        currentSlide = (currentSlide + 1) % slides.length;
+        slides[currentSlide].classList.add('active');
+      }, 2000);
+    }
+  </script>
 
 </body>
 </html>
