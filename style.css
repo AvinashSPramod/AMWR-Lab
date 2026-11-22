@@ -703,8 +703,8 @@ main p {
 }
 
 .pi-card .avatar-placeholder {
-  width: 300px !important;
-  height: 300px !important;
+  width: 280px !important;
+  height: 280px !important;
   min-width: 0 !important;
   max-width: 100% !important;
   overflow: hidden !important;
@@ -732,8 +732,8 @@ main p {
   }
 
   .pi-card .avatar-placeholder {
-    width: 260px !important;
-    height: 260px !important;
+    width: 220px !important;
+    height: 220px !important;
     margin: 0 auto;
   }
 }
