@@ -692,3 +692,48 @@ main p {
     font-size: 1.95rem;
   }
 }
+
+
+
+/* --- Fix Principal Investigator Image Overflow --- */
+
+.pi-card {
+  grid-template-columns: 200px minmax(0, 1fr);
+  min-width: 0;
+}
+
+.pi-card .avatar-placeholder {
+  width: 200px !important;
+  height: 200px !important;
+  min-width: 0 !important;
+  max-width: 100% !important;
+  overflow: hidden !important;
+  padding: 0 !important;
+  border: none;
+  border-radius: var(--radius);
+  position: relative;
+  display: block;
+}
+
+.pi-card .avatar-placeholder img {
+  display: block !important;
+  width: 100% !important;
+  height: 100% !important;
+  max-width: 100% !important;
+  max-height: 100% !important;
+  object-fit: cover !important;
+  object-position: center;
+}
+
+/* Mobile layout */
+@media (max-width: 960px) {
+  .pi-card {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .pi-card .avatar-placeholder {
+    width: 180px !important;
+    height: 180px !important;
+    margin: 0 auto;
+  }
+}
