@@ -208,6 +208,7 @@ a {
   color: var(--text-body);
   margin-bottom: 1.85rem;
   max-width: 600px;
+  text-align: justify;
 }
 
 .btn-group {
@@ -336,8 +337,10 @@ section:last-child {
   background-color: var(--bg-card);
   border: 1px solid var(--border);
   border-radius: var(--radius);
-  padding: 1.75rem;
+  padding: 1.85rem 2rem;
   box-shadow: var(--shadow-sm);
+  font-size: 1.02rem;
+  text-align: justify;
 }
 
 /* --- Research Pillars & Grids --- */
