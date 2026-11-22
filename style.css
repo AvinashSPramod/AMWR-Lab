@@ -732,8 +732,8 @@ main p {
   }
 
   .pi-card .avatar-placeholder {
-    width: 180px !important;
-    height: 180px !important;
+    width: 200px !important;
+    height: 200px !important;
     margin: 0 auto;
   }
 }
