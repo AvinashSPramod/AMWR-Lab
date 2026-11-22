@@ -26,10 +26,10 @@
 
       <nav aria-label="Primary Navigation">
         <ul class="nav-menu">
-          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="index.html">Home</a></li>
           <li><a href="research.html">Research</a></li>
           <li><a href="people.html">People</a></li>
-          <li><a href="publications.html">Publications</a></li>
+          <li><a href="publications.html" class="active">Publications</a></li>
           <li><a href="facilities.html">Facilities</a></li>
           <li><a href="openings.html">Openings</a></li>
         </ul>
@@ -119,11 +119,21 @@
         Department of Industrial Design, National Institute of Technology Rourkela, Odisha 769008, India
       </div>
       <div>
-        <strong>Contact:</strong> [EDIT: your-email@nitrkl.ac.in]<br />
+        <strong>Contact:</strong> avinashspramod@nitrkl.ac.in<br />
         &copy; 2026 AMWR Lab, NIT Rourkela. All rights reserved.
       </div>
     </div>
   </footer>
+
+  <script>
+    (function () {
+      const currentFile = window.location.pathname.split("/").pop() || "index.html";
+      document.querySelectorAll(".nav-menu a").forEach((link) => {
+        const targetFile = link.getAttribute("href");
+        link.classList.toggle("active", targetFile === currentFile);
+      });
+    })();
+  </script>
 
 </body>
 </html>
