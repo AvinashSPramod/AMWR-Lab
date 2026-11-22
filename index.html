@@ -1,657 +1,613 @@
-/* ==========================================================================
-   AMWR Lab — Master Stylesheet (style.css)
-   Single-line navigation, dual-logo header, and clean academic layout
-   ========================================================================== */
-
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap');
-
-:root {
-  --navy: #0b1f3a;
-  --blue: #1d4ed8;
-  --blue-dark: #1e3a8a;
-  --teal: #0d9488;
-  --blue-soft: #eff6ff;
-  --bg-page: #f8fafc;
-  --bg-card: #ffffff;
-  --text-dark: #0f172a;
-  --text-body: #334155;
-  --text-muted: #64748b;
-  --border: #e2e8f0;
-  --shadow-sm: 0 1px 3px rgba(15, 23, 42, 0.06);
-  --shadow-md: 0 12px 28px -6px rgba(15, 23, 42, 0.08);
-  --radius: 12px;
-  --max-w: 1180px;
-}
-
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-body {
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-  background-color: var(--bg-page);
-  color: var(--text-body);
-  line-height: 1.65;
-  font-size: 16px;
-  -webkit-font-smoothing: antialiased;
-}
-
-h1, h2, h3, .logo-name {
-  font-family: 'Plus Jakarta Sans', sans-serif;
-  color: var(--text-dark);
-  letter-spacing: -0.02em;
-}
-
-a {
-  text-decoration: none;
-  color: var(--blue);
-}
-
-/* --- Top Header & Single-Line Navigation --- */
-.site-header {
-  background-color: #ffffff;
-  border-top: 4px solid var(--blue);
-  border-bottom: 1px solid var(--border);
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  box-shadow: 0 2px 10px rgba(11, 31, 58, 0.05);
-}
-
-.nav-bar {
-  width: 100%;
-  max-width: 1480px;
-  margin: 0 auto;
-  padding: 0.7rem 2.25rem;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  align-items: center;
-  justify-content: space-between;
-  gap: 1.25rem;
-}
-
-.brand-group {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  align-items: center;
-  gap: 0.85rem;
-  flex-shrink: 0;
-  white-space: nowrap;
-}
-
-.brand-link {
-  display: inline-flex;
-  align-items: center;
-  flex-shrink: 0;
-}
-
-.lab-banner-logo {
-  height: 54px;
-  max-width: 210px;
-  width: auto;
-  object-fit: contain;
-  display: block;
-}
-
-.logo-divider {
-  width: 1px;
-  height: 40px;
-  background-color: #cbd5e1;
-  flex-shrink: 0;
-}
-
-.inst-group {
-  display: inline-flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  align-items: center;
-  gap: 0.6rem;
-  flex-shrink: 0;
-  white-space: nowrap;
-}
-
-.nitr-crest-logo {
-  height: 48px;
-  width: auto;
-  object-fit: contain;
-  display: block;
-}
-
-body.home-page .lab-banner-logo {
-  height: 64px;
-  max-width: 245px;
-}
-
-body.home-page .nitr-crest-logo {
-  height: 58px;
-}
-
-body.home-page .logo-divider {
-  height: 48px;
-}
-
-.inst-text {
-  display: flex;
-  flex-direction: column;
-  line-height: 1.2;
-}
-
-.inst-dept {
-  font-family: 'Plus Jakarta Sans', sans-serif;
-  font-size: 0.82rem;
-  font-weight: 700;
-  color: var(--navy);
-}
-
-.inst-name {
-  font-size: 0.76rem;
-  font-weight: 600;
-  color: var(--text-muted);
-}
-
-.nav-menu {
-  list-style: none;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  align-items: center;
-  gap: 0.25rem;
-  flex-shrink: 1;
-}
-
-.nav-menu li {
-  list-style: none;
-  white-space: nowrap;
-}
-
-.nav-menu a {
-  display: inline-block;
-  padding: 0.48rem 0.75rem;
-  border-radius: 8px;
-  font-size: 0.9rem;
-  font-weight: 600;
-  color: var(--text-body);
-  white-space: nowrap;
-  transition: all 0.15s ease;
-}
-
-.nav-menu a:hover {
-  background-color: var(--blue-soft);
-  color: var(--blue);
-}
-
-.nav-menu a.active {
-  background-color: var(--blue);
-  color: #ffffff;
-}
-
-/* --- Hero & Sub-Page Banners --- */
-.hero {
-  background: radial-gradient(circle at top right, #eff6ff 0%, #ffffff 55%, #f8fafc 100%);
-  border-bottom: 1px solid var(--border);
-  padding: 4.25rem 1.5rem;
-}
-
-.hero-grid {
-  max-width: var(--max-w);
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: 1.25fr 1fr;
-  gap: 2.75rem;
-  align-items: center;
-}
-
-.inst-pill {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.45rem;
-  background-color: var(--blue-soft);
-  color: var(--blue);
-  border: 1px solid #bfdbfe;
-  font-size: 0.78rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  padding: 0.35rem 0.9rem;
-  border-radius: 999px;
-  margin-bottom: 1.15rem;
-}
-
-.hero h1 {
-  font-size: 2.45rem;
-  font-weight: 800;
-  line-height: 1.18;
-  color: var(--navy);
-  margin-bottom: 1.1rem;
-}
-
-.hero p {
-  font-size: 1.06rem;
-  color: var(--text-body);
-  margin-bottom: 1.85rem;
-  max-width: 600px;
-  text-align: justify;
-}
-
-.btn-group {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.85rem;
-}
-
-.btn {
-  display: inline-block;
-  padding: 0.72rem 1.5rem;
-  border-radius: 8px;
-  font-weight: 600;
-  font-size: 0.95rem;
-  transition: all 0.15s ease;
-}
-
-.btn-primary {
-  background-color: var(--blue);
-  color: #ffffff;
-  box-shadow: 0 4px 12px rgba(29, 78, 216, 0.25);
-}
-
-.btn-primary:hover {
-  background-color: var(--blue-dark);
-  transform: translateY(-1px);
-}
-
-.btn-secondary {
-  background-color: #ffffff;
-  color: var(--navy);
-  border: 1px solid #cbd5e1;
-}
-
-.btn-secondary:hover {
-  border-color: var(--blue);
-  color: var(--blue);
-  background-color: var(--blue-soft);
-}
-
-.hero-card {
-  background-color: #ffffff;
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  padding: 1.25rem;
-  box-shadow: var(--shadow-md);
-}
-
-.hero-slider {
-  position: relative;
-  width: 100%;
-  aspect-ratio: 4 / 3;
-  overflow: hidden;
-  border-radius: 8px;
-}
-
-.hero-slide {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  opacity: 0;
-  transition: opacity 0.6s ease-in-out;
-}
-
-.hero-slide.active {
-  opacity: 1;
-}
-
-.hero-placeholder,
-.img-placeholder {
-  background: linear-gradient(135deg, #eff6ff 0%, #f0fdfa 100%);
-  border: 2px dashed #93c5fd;
-  border-radius: 8px;
-  min-height: 220px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding: 1.5rem;
-  color: var(--navy);
-  font-weight: 600;
-  font-size: 0.9rem;
-}
-
-.page-banner {
-  background: linear-gradient(135deg, var(--navy) 0%, var(--blue-dark) 100%);
-  color: #ffffff;
-  padding: 2.75rem 1.5rem;
-}
-
-.page-banner-inner {
-  max-width: var(--max-w);
-  margin: 0 auto;
-}
-
-.page-banner h1 {
-  color: #ffffff;
-  font-size: 2rem;
-  font-weight: 800;
-  margin-bottom: 0.4rem;
-}
-
-.page-banner p {
-  color: #cbd5e1;
-  font-size: 1.02rem;
-  max-width: 720px;
-}
-
-/* --- Main Container & Section Headings --- */
-.container {
-  max-width: var(--max-w);
-  margin: 0 auto;
-  padding: 3.5rem 1.5rem;
-}
-
-section {
-  margin-bottom: 3.75rem;
-}
-
-section:last-child {
-  margin-bottom: 0;
-}
-
-.section-heading {
-  font-size: 1.55rem;
-  font-weight: 800;
-  color: var(--navy);
-  margin-bottom: 1.5rem;
-  display: flex;
-  align-items: center;
-  gap: 0.7rem;
-}
-
-.section-heading::before {
-  content: "";
-  display: inline-block;
-  width: 5px;
-  height: 1.4rem;
-  background: linear-gradient(180deg, var(--blue), var(--teal));
-  border-radius: 4px;
-}
-
-.about-box,
-.card {
-  background-color: var(--bg-card);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  padding: 1.85rem 2rem;
-  box-shadow: var(--shadow-sm);
-  font-size: 1.02rem;
-  text-align: justify;
-}
-
-/* --- Research Pillars & Grids --- */
-.grid-3 {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1.5rem;
-}
-
-.grid-2 {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 1.5rem;
-}
-
-.pillar-card {
-  background-color: var(--bg-card);
-  border: 1px solid var(--border);
-  border-top: 4px solid var(--blue);
-  border-radius: var(--radius);
-  padding: 1.75rem;
-  box-shadow: var(--shadow-sm);
-  transition: transform 0.15s ease, box-shadow 0.15s ease;
-}
-
-.pillar-card:nth-child(2) {
-  border-top-color: var(--teal);
-}
-
-.pillar-card:hover {
-  transform: translateY(-3px);
-  box-shadow: var(--shadow-md);
-}
-
-.pillar-num {
-  display: inline-block;
-  font-size: 0.75rem;
-  font-weight: 800;
-  color: var(--blue);
-  background-color: var(--blue-soft);
-  padding: 0.2rem 0.6rem;
-  border-radius: 5px;
-  margin-bottom: 0.75rem;
-}
-
-.pillar-card h3,
-.card h3 {
-  font-size: 1.15rem;
-  font-weight: 700;
-  color: var(--navy);
-  margin-bottom: 0.6rem;
-}
-
-/* --- News Timeline --- */
-.news-card {
-  background-color: var(--bg-card);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  box-shadow: var(--shadow-sm);
-  overflow: hidden;
-}
-
-.news-row {
-  display: flex;
-  align-items: baseline;
-  gap: 1.25rem;
-  padding: 1.15rem 1.6rem;
-  border-bottom: 1px solid var(--border);
-}
-
-.news-row:last-child {
-  border-bottom: none;
-}
-
-.news-tag {
-  background-color: var(--blue-soft);
-  color: var(--blue);
-  font-weight: 700;
-  font-size: 0.78rem;
-  padding: 0.25rem 0.7rem;
-  border-radius: 6px;
-  min-width: 96px;
-  text-align: center;
-  flex-shrink: 0;
-}
-
-/* --- Research Feature Cards, People & Publications --- */
-.research-block {
-  display: grid;
-  grid-template-columns: 1fr 1.6fr;
-  gap: 2rem;
-  background-color: var(--bg-card);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  padding: 1.75rem;
-  margin-bottom: 1.75rem;
-  box-shadow: var(--shadow-sm);
-  align-items: center;
-}
-
-.research-block ul,
-.styled-list {
-  margin-top: 0.75rem;
-  padding-left: 1.25rem;
-}
-
-.pi-card {
-  display: grid;
-  grid-template-columns: 200px 1fr;
-  gap: 2rem;
-  background-color: var(--bg-card);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  padding: 2rem;
-  box-shadow: var(--shadow-sm);
-  align-items: start;
-}
-
-.avatar-placeholder {
-  width: 100%;
-  aspect-ratio: 1 / 1;
-  background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
-  border: 2px dashed #93c5fd;
-  border-radius: var(--radius);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding: 1rem;
-  font-size: 0.85rem;
-  font-weight: 600;
-  color: var(--blue);
-}
-
-.badge-row {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.55rem;
-  margin-top: 1.15rem;
-}
-
-.badge {
-  background-color: var(--blue-soft);
-  color: var(--blue);
-  border: 1px solid #bfdbfe;
-  padding: 0.3rem 0.8rem;
-  border-radius: 6px;
-  font-size: 0.85rem;
-  font-weight: 600;
-}
-
-.pub-list {
-  list-style: none;
-}
-
-.pub-item {
-  background-color: var(--bg-card);
-  border: 1px solid var(--border);
-  border-left: 4px solid var(--blue);
-  border-radius: var(--radius);
-  padding: 1.35rem 1.5rem;
-  margin-bottom: 1.15rem;
-  box-shadow: var(--shadow-sm);
-}
-
-.pub-badge {
-  display: inline-block;
-  font-size: 0.74rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  padding: 0.18rem 0.55rem;
-  border-radius: 4px;
-  margin-bottom: 0.45rem;
-  background-color: #f0fdfa;
-  color: var(--teal);
-  border: 1px solid #99f6e4;
-}
-
-.pub-title {
-  font-family: 'Plus Jakarta Sans', sans-serif;
-  font-size: 1.06rem;
-  font-weight: 700;
-  color: var(--navy);
-  display: block;
-  margin-bottom: 0.3rem;
-}
-
-.pub-authors,
-.pub-venue {
-  display: block;
-  font-size: 0.93rem;
-}
-
-.pub-venue {
-  font-style: italic;
-  color: var(--text-muted);
-  margin-top: 0.2rem;
-}
-
-.pub-links {
-  margin-top: 0.7rem;
-  display: flex;
-  gap: 0.55rem;
-}
-
-.pub-links a {
-  font-size: 0.8rem;
-  font-weight: 600;
-  padding: 0.22rem 0.65rem;
-  background-color: var(--blue-soft);
-  border: 1px solid #bfdbfe;
-  border-radius: 5px;
-}
-
-.callout-box {
-  background: linear-gradient(135deg, #eff6ff 0%, #f0fdfa 100%);
-  border: 1px solid #bfdbfe;
-  border-left: 5px solid var(--blue);
-  padding: 1.5rem 1.75rem;
-  border-radius: var(--radius);
-  margin-bottom: 2rem;
-}
-
-/* --- Footer --- */
-.site-footer {
-  background-color: var(--navy);
-  color: #cbd5e1;
-  padding: 2.75rem 1.5rem;
-  margin-top: 4rem;
-  font-size: 0.92rem;
-}
-
-.footer-grid {
-  max-width: var(--max-w);
-  margin: 0 auto;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 1.5rem;
-}
-
-.footer-grid strong {
-  color: #ffffff;
-}
-
-@media (max-width: 960px) {
-  .nav-bar {
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 0.85rem 1.5rem;
-  }
-  .nav-menu {
-    width: 100%;
-    overflow-x: auto;
-  }
-  .hero-grid,
-  .grid-3,
-  .grid-2,
-  .research-block,
-  .pi-card {
-    grid-template-columns: 1fr;
-  }
-  .hero h1 {
-    font-size: 1.95rem;
-  }
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AMWR Lab | Advanced Mechanism &amp; Wearable Robotics Lab — NIT Rourkela</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --navy: #0b1f3a;
+      --blue: #1d4ed8;
+      --blue-dark: #1e3a8a;
+      --teal: #0d9488;
+      --blue-soft: #eff6ff;
+      --bg-page: #f8fafc;
+      --bg-card: #ffffff;
+      --text-dark: #0f172a;
+      --text-body: #334155;
+      --text-muted: #64748b;
+      --border: #e2e8f0;
+      --shadow-sm: 0 1px 3px rgba(15, 23, 42, 0.06);
+      --shadow-md: 0 12px 28px -6px rgba(15, 23, 42, 0.08);
+      --radius: 12px;
+      --max-w: 1180px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background-color: var(--bg-page);
+      color: var(--text-body);
+      line-height: 1.65;
+      font-size: 16px;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    h1, h2, h3 {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      color: var(--text-dark);
+      letter-spacing: -0.02em;
+    }
+
+    a {
+      text-decoration: none;
+      color: var(--blue);
+    }
+
+    /* --- Top Header & Single-Line Navigation (Wider Than Body) --- */
+    .site-header {
+      background-color: #ffffff;
+      border-top: 4px solid var(--blue);
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 10px rgba(11, 31, 58, 0.05);
+    }
+
+    .nav-bar {
+      width: 100%;
+      max-width: 1480px;
+      margin: 0 auto;
+      padding: 0.7rem 2.25rem;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1.25rem;
+    }
+
+    .brand-group {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      align-items: center;
+      gap: 0.85rem;
+      flex-shrink: 0;
+      white-space: nowrap;
+    }
+
+    .brand-link {
+      display: inline-flex;
+      align-items: center;
+      flex-shrink: 0;
+    }
+
+    .lab-banner-logo {
+      height: 54px;
+      max-width: 210px;
+      width: auto;
+      object-fit: contain;
+      display: block;
+    }
+
+    .logo-divider {
+      width: 1px;
+      height: 40px;
+      background-color: #cbd5e1;
+      flex-shrink: 0;
+    }
+
+    .inst-group {
+      display: inline-flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      align-items: center;
+      gap: 0.6rem;
+      flex-shrink: 0;
+      white-space: nowrap;
+    }
+
+    .nitr-crest-logo {
+      height: 48px;
+      width: auto;
+      object-fit: contain;
+      display: block;
+    }
+
+    body.home-page .lab-banner-logo {
+      height: 64px;
+      max-width: 245px;
+    }
+
+    body.home-page .nitr-crest-logo {
+      height: 58px;
+    }
+
+    body.home-page .logo-divider {
+      height: 48px;
+    }
+
+    .inst-text {
+      display: flex;
+      flex-direction: column;
+      line-height: 1.2;
+    }
+
+    .inst-dept {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 0.82rem;
+      font-weight: 700;
+      color: var(--navy);
+    }
+
+    .inst-name {
+      font-size: 0.76rem;
+      font-weight: 600;
+      color: var(--text-muted);
+    }
+
+    /* Force single horizontal line for all menu items */
+    .nav-menu {
+      list-style: none;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      align-items: center;
+      gap: 0.25rem;
+      flex-shrink: 1;
+    }
+
+    .nav-menu li {
+      list-style: none;
+      white-space: nowrap;
+    }
+
+    .nav-menu a {
+      display: inline-block;
+      padding: 0.48rem 0.75rem;
+      border-radius: 8px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--text-body);
+      white-space: nowrap;
+      transition: all 0.15s ease;
+    }
+
+    .nav-menu a:hover {
+      background-color: var(--blue-soft);
+      color: var(--blue);
+    }
+
+    .nav-menu a.active {
+      background-color: var(--blue);
+      color: #ffffff;
+    }
+
+    /* --- Hero Section --- */
+    .hero {
+      background: radial-gradient(circle at top right, #eff6ff 0%, #ffffff 55%, #f8fafc 100%);
+      border-bottom: 1px solid var(--border);
+      padding: 4.25rem 1.5rem;
+    }
+
+    .hero-grid {
+      max-width: var(--max-w);
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1.25fr 1fr;
+      gap: 2.75rem;
+      align-items: center;
+    }
+
+    .inst-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      background-color: var(--blue-soft);
+      color: var(--blue);
+      border: 1px solid #bfdbfe;
+      font-size: 0.78rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      padding: 0.35rem 0.9rem;
+      border-radius: 999px;
+      margin-bottom: 1.15rem;
+    }
+
+    .hero h1 {
+      font-size: 2.45rem;
+      font-weight: 800;
+      line-height: 1.18;
+      color: var(--navy);
+      margin-bottom: 1.1rem;
+    }
+
+    .hero p {
+      font-size: 1.06rem;
+      color: var(--text-body);
+      margin-bottom: 1.85rem;
+      max-width: 600px;
+      text-align: justify;
+    }
+
+    .btn-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.85rem;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 0.72rem 1.5rem;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 0.95rem;
+      transition: all 0.15s ease;
+    }
+
+    .btn-primary {
+      background-color: var(--blue);
+      color: #ffffff;
+      box-shadow: 0 4px 12px rgba(29, 78, 216, 0.25);
+    }
+
+    .btn-primary:hover {
+      background-color: var(--blue-dark);
+      transform: translateY(-1px);
+    }
+
+    .btn-secondary {
+      background-color: #ffffff;
+      color: var(--navy);
+      border: 1px solid #cbd5e1;
+    }
+
+    .btn-secondary:hover {
+      border-color: var(--blue);
+      color: var(--blue);
+      background-color: var(--blue-soft);
+    }
+
+    .hero-card {
+      background-color: #ffffff;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.25rem;
+      box-shadow: var(--shadow-md);
+    }
+
+    .hero-slider {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      overflow: hidden;
+      border-radius: 8px;
+    }
+
+    .hero-slide {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0;
+      transition: opacity 0.6s ease-in-out;
+    }
+
+    .hero-slide.active {
+      opacity: 1;
+    }
+
+    /* --- Main Container & Sections --- */
+    .container {
+      max-width: var(--max-w);
+      margin: 0 auto;
+      padding: 3.5rem 1.5rem;
+    }
+
+    section {
+      margin-bottom: 3.75rem;
+    }
+
+    section:last-child {
+      margin-bottom: 0;
+    }
+
+    .section-heading {
+      font-size: 1.55rem;
+      font-weight: 800;
+      color: var(--navy);
+      margin-bottom: 1.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.7rem;
+    }
+
+    .section-heading::before {
+      content: "";
+      display: inline-block;
+      width: 5px;
+      height: 1.4rem;
+      background: linear-gradient(180deg, var(--blue), var(--teal));
+      border-radius: 4px;
+    }
+
+    .about-box {
+      background-color: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.85rem 2rem;
+      box-shadow: var(--shadow-sm);
+      font-size: 1.02rem;
+    }
+
+    /* --- Research Pillars Grid --- */
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+    }
+
+    .pillar-card {
+      background-color: var(--bg-card);
+      border: 1px solid var(--border);
+      border-top: 4px solid var(--blue);
+      border-radius: var(--radius);
+      padding: 1.75rem;
+      box-shadow: var(--shadow-sm);
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
+    }
+
+    .pillar-card:nth-child(2) {
+      border-top-color: var(--teal);
+    }
+
+    .pillar-card:hover {
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-md);
+    }
+
+    .pillar-num {
+      display: inline-block;
+      font-size: 0.75rem;
+      font-weight: 800;
+      color: var(--blue);
+      background-color: var(--blue-soft);
+      padding: 0.2rem 0.6rem;
+      border-radius: 5px;
+      margin-bottom: 0.75rem;
+    }
+
+    .pillar-card h3 {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 0.6rem;
+    }
+
+    .pillar-card p {
+      font-size: 0.95rem;
+      color: var(--text-body);
+    }
+
+    /* --- News Timeline --- */
+    .news-card {
+      background-color: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow-sm);
+      overflow: hidden;
+    }
+
+    .news-row {
+      display: flex;
+      align-items: baseline;
+      gap: 1.25rem;
+      padding: 1.15rem 1.6rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .news-row:last-child {
+      border-bottom: none;
+    }
+
+    .news-tag {
+      background-color: var(--blue-soft);
+      color: var(--blue);
+      font-weight: 700;
+      font-size: 0.78rem;
+      padding: 0.25rem 0.7rem;
+      border-radius: 6px;
+      min-width: 96px;
+      text-align: center;
+      flex-shrink: 0;
+    }
+
+    /* --- Footer --- */
+    .site-footer {
+      background-color: var(--navy);
+      color: #cbd5e1;
+      padding: 2.75rem 1.5rem;
+      margin-top: 4rem;
+      font-size: 0.92rem;
+    }
+
+    .footer-grid {
+      max-width: var(--max-w);
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 1.5rem;
+    }
+
+    .footer-grid strong {
+      color: #ffffff;
+    }
+
+    @media (max-width: 960px) {
+      .nav-bar {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0.85rem 1.5rem;
+      }
+      .nav-menu {
+        width: 100%;
+        overflow-x: auto;
+      }
+      .hero-grid,
+      .grid-3 {
+        grid-template-columns: 1fr;
+      }
+      .hero h1 {
+        font-size: 1.95rem;
+      }
+    }
+  </style>
+</head>
+<body class="home-page">
+
+  <!-- Header with Lab Banner + NIT Rourkela Crest & Single-Line Navigation -->
+  <header class="site-header">
+    <div class="nav-bar">
+      <div class="brand-group">
+        <a href="index.html" class="brand-link">
+          <img src="assets/AMWR_Lab_Logo.png" alt="Advanced Mechanism and Wearable Robotics Lab" class="lab-banner-logo" />
+        </a>
+        <span class="logo-divider" aria-hidden="true"></span>
+        <a href="https://www.nitrkl.ac.in/ID/" target="_blank" rel="noopener noreferrer" class="inst-group" title="NIT Rourkela Department of Industrial Design">
+          <img src="assets/NIT_Rourkela_Colour_Logo_Official.png" alt="NIT Rourkela Logo" class="nitr-crest-logo" />
+          <div class="inst-text">
+            <span class="inst-dept">Department of Industrial Design</span>
+            <span class="inst-name">NIT Rourkela</span>
+          </div>
+        </a>
+      </div>
+
+      <nav aria-label="Primary Navigation">
+        <ul class="nav-menu">
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="research.html">Research</a></li>
+          <li><a href="people.html">People</a></li>
+          <li><a href="publications.html">Publications</a></li>
+          <li><a href="facilities.html">Facilities</a></li>
+          <li><a href="openings.html">Openings</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-grid">
+      <div>
+        <span class="inst-pill">AMWR Lab &bull; NIT Rourkela</span>
+        <h1>Advanced Mechanism &amp; Wearable Robotics Lab</h1>
+        <p>
+          We envision robotics that seamlessly integrates with human needs, capabilities, and environments. Our research explores the design and development of human-centric robotic systems, bringing together system design, engineering, and robotics to address challenges in physical assistance, rehabilitation, and human augmentation. While wearable robotics forms a central part of our research, our interests extend to soft robotics, field robotics, and service robotics, driven by the diverse challenges and opportunities at the intersection of humans and machines.
+        </p>
+        <div class="btn-group">
+          <a href="research.html" class="btn btn-primary">Explore Research</a>
+          <a href="openings.html" class="btn btn-secondary">Join Our Group</a>
+        </div>
+      </div>
+
+      <div class="hero-card">
+        <div class="hero-slider">
+          <img src="assets/Image_1.png" alt="AMWR Lab Slide 1" class="hero-slide active" />
+          <img src="assets/Image_2.png" alt="AMWR Lab Slide 2" class="hero-slide" />
+          <img src="assets/Image_3.png" alt="AMWR Lab Slide 3" class="hero-slide" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <main class="container">
+
+    <section>
+      <h2 class="section-heading">About the Laboratory</h2>
+      <div class="about-box">
+        Led by <strong>Dr. Avinash S Pramod</strong> in the Department of Industrial Design at the National Institute of Technology (NIT) Rourkela, the Advanced Mechanism and Wearable Robotics (AMWR) Lab focuses on the design and development of human-centric robotic systems through advanced mechanism design, engineering, and experimental validation. Our research spans wearable robotics, physical human-robot interaction, assistive and rehabilitation systems, and emerging areas of robotics.
+      </div>
+    </section>
+
+    <section>
+      <h2 class="section-heading">Core Research Pillars</h2>
+      <div class="grid-3">
+        <div class="pillar-card">
+          <span class="pillar-num">THEME 01</span>
+          <h3>Mechanism Synthesis &amp; Kinematics</h3>
+          <p>
+            Closed-loop linkage optimization, self-aligning anatomical joints, and passive spring-cam-pulley transmissions engineered for lightweight, unpowered assistance.
+          </p>
+        </div>
+        <div class="pillar-card">
+          <span class="pillar-num">THEME 02</span>
+          <h3>Industrial &amp; Assistive Exoskeletons</h3>
+          <p>
+            Upper-limb and lower-back wearable systems designed to offload musculoskeletal strain during overhead lifting and repetitive industrial stoop tasks.
+          </p>
+        </div>
+        <div class="pillar-card">
+          <span class="pillar-num">THEME 03</span>
+          <h3>Soft Cable-Driven Exosuits</h3>
+          <p>
+            3D geodesic cable-routing models and active anchor-point reconfiguration validated on instrumented phantom benches and human subjects.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2 class="section-heading">News &amp; Announcements</h2>
+      <div class="news-card">
+        <div class="news-row">
+          <span class="news-tag">Nov 2026</span>
+          <span><strong>Lab Launch:</strong> The Advanced Mechanism and Wearable Robotics Lab is established in the Department of Industrial Design, NIT Rourkela.</span>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-grid">
+      <div>
+        <strong>Advanced Mechanism and Wearable Robotics Lab</strong><br />
+        Department of Industrial Design, NIT Rourkela, Odisha 769008, India
+      </div>
+      <div>
+        <strong>Contact:</strong> avinashspramod@nitrkl.ac.in <br />
+        &copy; 2026 AMWR Lab. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const slides = document.querySelectorAll('.hero-slide');
+    let currentSlide = 0;
+
+    if (slides.length > 1) {
+      setInterval(() => {
+        slides[currentSlide].classList.remove('active');
+        currentSlide = (currentSlide + 1) % slides.length;
+        slides[currentSlide].classList.add('active');
+      }, 2000);
+    }
+  </script>
+
+</body>
+</html>
