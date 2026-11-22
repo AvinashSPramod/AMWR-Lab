@@ -703,8 +703,8 @@ main p {
 }
 
 .pi-card .avatar-placeholder {
-  width: 200px !important;
-  height: 200px !important;
+  width: 240px !important;
+  height: 240px !important;
   min-width: 0 !important;
   max-width: 100% !important;
   overflow: hidden !important;
