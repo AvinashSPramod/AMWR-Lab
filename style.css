@@ -72,7 +72,9 @@ a {
 }
 
 .brand-group {
-  display: flex;
+  display: inline-flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
   align-items: center;
   gap: 1rem;
   flex-shrink: 0;
